@@ -7,7 +7,7 @@ FactPro will be approved by all team members and it will be developed in HTML, C
 ## Developers
 - Alrtamirano Morelos Dan. All permits.
 - Salas Dimas Carlos. All permits.
-- Alex Dey Rodriguez. All permits.
+- Alejandro Rodríguez Martínez. All permits.
 
 ## Users
 ### Users with no registration
