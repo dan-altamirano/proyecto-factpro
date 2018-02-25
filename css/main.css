@@ -4,7 +4,11 @@
 
 /* ----------------- GENERALS ------------------*/
 * {
-  background-color: #4F4F4F;
+	background-image: url(images/fondo.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover; 
 }
 
 body {
@@ -14,12 +18,13 @@ body {
 }
 
 form {
-  width: 33%;
+  width: 90%;
+  border-radius: 10px;
 }
 
 section {
   background-color: #EEE;
-  width: auto;
+  width: 43%;
   height: auto;
   border-radius: 15px;
   display: flex;
@@ -40,4 +45,5 @@ section h2 {
     color: #FFF;
     font-weight: bold;
     word-spacing: 1px;
+    font-size: 1em;
 }
