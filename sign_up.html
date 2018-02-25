@@ -13,6 +13,7 @@
         <form action="#" method="post"  enctype="multipart/form-data">
           <h1>Sign up</h1>
           <h2>Welcome to FactPro</h2>
+          <div class="section-inputs">
           <div class="two-columns">
             <div class="input-group">
               <label for="name">Your Name</label>
@@ -30,19 +31,13 @@
           <label for="password">Password</label>
           <input type="password" name="password" id="pass" placeholder="Choose password">
 
-          <fieldset>
-            <legend>Select your sex</legend>
-            <input type="radio" name="sex" id="fem" value="f">
-            <label for="fem">Female</label>
-            <input type="radio" name="sex" id="male" value="m">
-            <label for="male">Male</label>
-          </fieldset>
-
             <label for="age">Age</label>
             <input type="text" name="age" id="age" pattern="\d+"
             placeholder="Enter your age"min="18" max="65">
 
           <button type="submit" name="button">Submit</button>
+
+        </div>
         </form>
       </section>
   </body>
