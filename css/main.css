@@ -1,3 +1,43 @@
 /*-------------------------------------------*/
 /*------------- SIGN UP SECTION -------------*/
 /*-------------------------------------------*/
+
+/* ----------------- GENERALS ------------------*/
+* {
+  background-color: #4F4F4F;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 33%;
+}
+
+section {
+  background-color: #EEE;
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+section h1 {
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+section h2 {
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    word-spacing: 1px;
+}
