@@ -3,14 +3,12 @@
   font-family: Ubuntu-Regular;
   src: url('../fonts/ubuntu/Ubuntu-Regular.ttf');
 }
-
 @font-face {
   font-family: Ubuntu-Bold;
   src: url('../fonts/ubuntu/Ubuntu-Bold.ttf');
 }
 
 /* --------------------------- General -------------------------------------- */
-
 * {
 	margin: 0px;
 	padding: 0px;
