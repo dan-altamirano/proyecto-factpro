@@ -75,3 +75,26 @@ button:hover {
 	cursor: pointer;
   background-color: #2F547F;
 }
+
+@media (max-width: 600px) {
+  .fact-logo,
+  .main-text,
+  .about {
+    flex-basis: 100%;
+  }
+  .main-text {
+    height: 300px;
+  }
+  .main-text span{
+    font-size: 30px;
+  }
+  .main-text p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+  }
+  .activate button {
+    font-size: 12px;
+    width: 50%;
+  }
+}
