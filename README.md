@@ -5,9 +5,15 @@ FactPro consists of developing and implementing a web page that will have differ
 FactPro will be approved by all team members and it will be developed in HTML, CSS
 
 ## Developers
+<<<<<<< HEAD
 * **Alrtamirano Morelos Dan.** All permits.
 * **Salas Dimas Carlos.** All permits.
 * **Alex Dey Rodriguez.** All permits.
+=======
+- Alrtamirano Morelos Dan. All permits.
+- Salas Dimas Carlos. All permits.
+- Alejandro Rodríguez Martínez. All permits.
+>>>>>>> d74e4f08c4b21a539daa40ac74cc8fbd0ecb1651
 
 ## Users
 ### Users with no registration
