@@ -54,6 +54,7 @@
 }
 .about a {
   color: white;
+  text-decoration: none;
 }
 .activate button {
   background-color: #467FBF;
@@ -74,6 +75,9 @@
 button:hover {
 	cursor: pointer;
   background-color: #2F547F;
+}
+a:hover {
+  color: #467FBF;
 }
 
 @media (max-width: 600px) {
