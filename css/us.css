@@ -37,3 +37,22 @@ p {
   font-size: 1.5em;
   text-align: center;
 }
+
+#sign {
+  text-decoration: none;
+  color: #5EA9FF;
+}
+
+/*--------------------- RESPONSIVE ------------------*/
+
+
+
+@media screen and (max-width: 479px){
+
+  .images {
+    width: 80%;
+    border-radius: 30%;
+    margin-left: 15%;
+  }
+
+}
