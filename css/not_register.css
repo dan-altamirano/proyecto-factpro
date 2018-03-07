@@ -1,0 +1,47 @@
+/*------------ GENERALS -----------*/
+
+body {
+  background-color: #D0D0D0;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*------------ HEADER -----------*/
+header {
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-around;
+}
+
+.welcome {
+  background-color: #7BCCC7;
+}
+
+.welcome img {
+  width: 100%;
+}
+
+.information {
+  background-color: #FFF;
+}
+
+button {
+  margin-top: 5px;
+  padding: 0 20px;
+  width: 20%;
+  height: 50px;
+  border-radius: 5px;
+  background: #47CF73;
+  font-size: 12px;
+  color: #FFFFFF;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #2BCC9E;
+}

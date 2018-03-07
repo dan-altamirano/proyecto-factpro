@@ -1,0 +1,58 @@
+/* ----------------- GENERALS ------------------*/
+* {
+  font-family: "Cormorant", Times, serif;
+}
+
+body {
+  background: #4F4F4F;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  width: 70%;
+  color: #FFF;
+  border-radius: 15px;
+}
+
+.images {
+  width: 60%;
+  border-radius: 50%;
+  margin-left: 20%  ;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 2.4em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#sign {
+  text-decoration: none;
+  color: #5EA9FF;
+}
+
+/*--------------------- RESPONSIVE ------------------*/
+
+
+
+@media screen and (max-width: 479px){
+
+  .images {
+    width: 80%;
+    border-radius: 30%;
+    margin-left: 15%;
+  }
+
+}

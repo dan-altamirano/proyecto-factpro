@@ -1,0 +1,129 @@
+/*-------------------------------------------*/
+/*------------- SIGN UP SECTION -------------*/
+/*-------------------------------------------*/
+
+/* ----------------- GENERALS ------------------*/
+
+body {
+  background: #4F4F4F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 95%;
+  border-radius: 10px;
+}
+
+section {
+  background-color: white;
+  width: 33%;
+  height: auto;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.section-inputs {
+  width: 100%;
+  background-color: #EEE;
+  padding-left: 5%;
+}
+
+section h1 {
+  text-align: center;
+  color: #4F4F4F;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+section h2 {
+    text-align: center;
+    color: #4F4F4F;
+    font-weight: bold;
+    word-spacing: 1px;
+    font-size: 1em;
+}
+
+/* ----------------- INPUTS ------------------*/
+
+label,
+input {
+  display: block;
+  width: 100%;
+}
+
+label {
+  color: #9EA3A3;
+  padding-top: 10px;
+  font-variant: small-caps;
+}
+
+
+.two-columns {
+  display: flex;
+}
+
+.two-columns > * {
+  width: 46%;
+}
+
+.two-columns label {
+  color: #9EA3A3;
+  padding-top: 15px;
+  font-variant: small-caps;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid #CCC;
+  padding: 10px;
+  margin-top: 5px;
+  width: 85%;
+}
+
+input:hover {
+  border-color: #4F4F4F;
+}
+
+/* ----------------- BUTTON ------------------*/
+
+button {
+  margin-top: 5px;
+  padding: 0 20px;
+  width: 92%;
+  height: 50px;
+  border-radius: 5px;
+  background: #47CF73;
+  font-size: 12px;
+  color: #FFFFFF;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #2BCC9E;
+}
+
+/*-------------- RESPONSIVE ------------------*/
+
+@media screen and (min-width: 480px) and (max-width: 800px){
+
+  section {
+    width: 55%;
+  }
+
+
+}
+
+@media screen and (max-width: 479px){
+
+  section {
+    width: 75%;
+  }
+
+
+}
