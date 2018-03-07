@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  src: url('../fonts/DroidSans/DroidSans-Regular.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+  U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+  U+FEFF, U+FFFD;
+}
+* {
+  font-family: 'Droid Sans', 'Helvetica Neue', 'Arial', 'sans-serif';
+}
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.fact-logo{
+  text-align: center;
+  flex-basis: 80%;
+  font-size: 30px;
+  color: #313740;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 80%;
+  height: 250px;
+  background-color: #5EA9FF;
+  text-align: center;
+}
+.main-text span{
+  font-size: 40px;
+  color: white;
+}
+.main-text p {
+  padding-left: 65px;
+  padding-right: 65px;
+  color: #172A40;
+  font-size: 18px;
+}
+.about {
+  text-align: center;
+  flex-basis: 80%;
+  height: 80px;
+  padding-top: 30px;
+  background-color: #172A40;
+  color: white;
+}
+.about span {
+  text-align: center;
+}
+.about a {
+  color: white;
+  text-decoration: none;
+}
+.activate button {
+  background-color: #467FBF;
+  outline: none;
+	border: none;
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+  padding: 0 20px;
+  width: 20%;
+  height: 50px;
+  border-radius: 6px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+button:hover {
+	cursor: pointer;
+  background-color: #2F547F;
+}
+a:hover {
+  color: #467FBF;
+}
+
+@media (max-width: 600px) {
+  .fact-logo,
+  .main-text,
+  .about {
+    flex-basis: 100%;
+  }
+  .main-text {
+    height: 300px;
+  }
+  .main-text span{
+    font-size: 30px;
+  }
+  .main-text p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+  }
+  .activate button {
+    font-size: 12px;
+    width: 50%;
+  }
+}

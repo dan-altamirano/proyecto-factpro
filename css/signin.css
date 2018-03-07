@@ -3,14 +3,12 @@
   font-family: Ubuntu-Regular;
   src: url('../fonts/ubuntu/Ubuntu-Regular.ttf');
 }
-
 @font-face {
   font-family: Ubuntu-Bold;
   src: url('../fonts/ubuntu/Ubuntu-Bold.ttf');
 }
 
 /* --------------------------- General -------------------------------------- */
-
 * {
 	margin: 0px;
 	padding: 0px;
@@ -68,6 +66,17 @@ button {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
+a {
+  font-family: Ubuntu-Regular;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+  text-decoration: none;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
 
 /* --------------------------- Contenedores --------------------------------- */
 .main-container {
@@ -93,8 +102,8 @@ button {
   background: #fff;
   border-radius: 10px;
   position: relative;
-  padding-bottom: 90px;
-  padding-top: 50px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 .wrap-input {
   width: 100%;
@@ -150,6 +159,30 @@ button {
   flex-wrap: wrap;
   margin-top: 17px;
 }
+.forgot {
+  padding-top: 12px;
+}
+.forgot span {
+  font-family: Ubuntu-Regular;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #999999;
+}
+.forgot a {
+  font-family: Ubuntu-Regular;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666666;
+}
+.create {
+  padding-top: 106px;
+}
+.create a {
+  font-family: Ubuntu-Regular;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666666;
+}
 
 /* --------------------------- Animaciones ---------------------------------- */
 button:hover {
@@ -164,6 +197,14 @@ input:-moz-placeholder,
 input::-moz-placeholder,
 input:-ms-input-placeholder {
   color: #8f8fa1;
+}
+a:focus {
+	outline: none;
+}
+
+a:hover {
+	text-decoration: none;
+  color: #5076c8;
 }
 .focus-input {
   position: absolute;
