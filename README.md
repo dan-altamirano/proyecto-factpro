@@ -5,9 +5,9 @@ FactPro consists of developing and implementing a web page that will have differ
 FactPro will be approved by all team members and it will be developed in HTML, CSS
 
 ## Developers
-- Alrtamirano Morelos Dan. All permits.
-- Salas Dimas Carlos. All permits.
-- Alejandro Rodríguez Martínez. All permits.
+* **Altamirano Morelos Dan.** All permits.
+* **Salas Dimas Carlos.** All permits.
+* **Alejandro Rodríguez Martínez.** All permits.
 
 ## Users
 ### Users with no registration
@@ -19,6 +19,20 @@ The registration will be done by filling out a form with basic information (user
 The users can perform the following actions:
 
 - Add and delete their own bills and invoices, in addition to modifying at any data, description and information of those.
+
+### Prerequisites
+
+Install html code editor
+
+## Compatibility
+
+```
+Google Chrome
+Mozilla Firefox
+Internet Explorer
+Safari
+Opera
+```
 
 ## Modules and functionality
 - Module description
