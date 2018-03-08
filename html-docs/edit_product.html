@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="../vendor/normalize.css">
+    <link rel="stylesheet" href="../css/main-form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+<header>
+  <div class="navigation">
+    <a href="#index.html" class="item" id="logo">FACTPRO</a>
+    <!-- Right-sided navbar links -->
+    <div class="options">
+      <a href="#" class="item">ALMACEN</a>
+      <a href="#" class="item">INVENTARIO</a>
+    </div>
+  </div>
+</header>
+
+<div class="main-container">
+  <div class="wrap">
+  <form action="" method="POST" enctype="multipart/form-data">
+    <span class="form-title">Edit Product</span>
+
+    <label for="id">Id</label>
+    <div class="wrap-input">
+      <input
+      class="inputc"
+      type="text"
+      id="id"
+      name="id"
+      placeholder="0109"
+      />
+    </div>
+    <label for="description">Description</label>
+    <div class="wrap-input">
+      <input
+      class="inputc"
+      type="text"
+      id="description"
+      name="description"
+      placeholder="Laptop 32GB RAM"
+      />
+    </div>
+    <label for="price">Price</label>
+    <div class="wrap-input">
+      <input
+      class="inputc"
+      type="text"
+      id="price"
+      name="price"
+      placeholder="$15,000"
+      />
+    </div>
+    <label for="amount">Amount</label>
+    <div class="wrap-input">
+      <input
+      class="inputc"
+      type="number"
+      id="amount"
+      name="amount"
+      placeholder="6"
+      />
+    </div>
+      <div class="btn">
+        <button type="submit" name="button">Save Changes</button>
+      </div>
+      <div class="create">
+        <a href="#">
+          Cancel
+        </a>
+      </div>
+  </form>
+</div>
+</div>
+
+<footer class="center">
+  <p>FACTPRO <a href="#"
+    title="Contact" target="_blank" class="colorlink">FactPro</a></p>
+</footer>
+  </body>
+</html>
