@@ -129,7 +129,14 @@ caption {
   font-size: 16px;
   background-color: #f1f1f1;
 }
-
+.wrap-input {
+  width: 25%;
+  position: relative;
+  background-color: #e6e6e6;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
 /* --------------------------- Animaciones ---------------------------------- */
 button:hover {
 	cursor: pointer;

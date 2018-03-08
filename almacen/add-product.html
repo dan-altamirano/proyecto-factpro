@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Add Product</title>
-    <link rel="stylesheet" href="vendor/normalize.css">
+    <title>Agregar producto</title>
+    <link rel="stylesheet" href="../vendor/normalize.css">
     <link rel="stylesheet" href="../css/main-form.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -11,71 +11,68 @@
 <header>
   <div class="navigation">
     <a href="#index.html" class="item" id="logo">FACTPRO</a>
-    <!-- Right-sided navbar links -->
     <div class="options">
       <a href="#" class="item">ALMACEN</a>
       <a href="#" class="item">INVENTARIO</a>
     </div>
   </div>
 </header>
-
 <div class="main-container">
   <div class="wrap">
   <form action="" method="POST" enctype="multipart/form-data">
-    <span class="form-title">Add a Product</span>
+    <span class="form-title">Agregar producto</span>
 
-    <label for="id">Id</label>
+    <label for="id">ID</label>
     <div class="wrap-input">
       <input
       class="inputc"
       type="text"
       id="id"
       name="id"
-      placeholder="ID product"
+      placeholder="ID del producto"
       />
     </div>
-    <label for="description">Description</label>
+    <label for="name">Nombre</label>
     <div class="wrap-input">
       <input
       class="inputc"
       type="text"
-      id="description"
-      name="description"
-      placeholder="Product description"
+      id="name"
+      name="name"
+      placeholder="Nombre del producto"
       />
     </div>
-    <label for="price">Price</label>
+    <label for="price">Precio</label>
     <div class="wrap-input">
       <input
       class="inputc"
       type="text"
       id="price"
       name="price"
-      placeholder="Price"
+      placeholder="Precio"
       />
     </div>
-    <label for="amount">Amount</label>
+    <label for="amount">Cantidad</label>
     <div class="wrap-input">
       <input
       class="inputc"
       type="number"
       id="amount"
       name="amount"
-      placeholder="Amount"
+      placeholder="Cantidad"
       />
     </div>
       <div class="btn">
-        <button type="submit" name="button">Add Product</button>
+        <button type="submit" name="button">Agregar producto</button>
       </div>
       <div class="create">
         <a href="#">
-          Cancel
+          Cancelar
         </a>
       </div>
   </form>
 </div>
 </div>
-
 <footer class="center">
   <p>FACTPRO <a href="#"
     title="Contact" target="_blank" class="colorlink">FactPro</a></p>
