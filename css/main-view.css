@@ -20,6 +20,16 @@
   flex-wrap: wrap;
   margin-top: 17px;
 }
+
+
+.wrap-inputInv {
+  width: 100%;
+  position: relative;
+  background-color: #e6e6e6;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
 /* --------------------------- General -------------------------------------- */
 * {
 	margin: 0px;
