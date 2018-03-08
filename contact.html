@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FactPro | Contact</title>
+    <link rel="stylesheet" href="vendor/normalize.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+  <header>
+    <div class="navigation">
+      <a href="#index.html" class="item" id="logo">FACTPRO</a>
+      <div class="options">
+        <a href="#signup" class="item">SIGN UP</a>
+        <a href="#signin" class="item">SIGN IN</a>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="main-container">
+      <div class="wrap-login">
+        <form action="index.html" method="post" enctype="multipart/form-data" id="ctcform">
+          <span class="form-title">Need help? We're here for you!</span>
+          <div class="wrap-input">
+            <input
+            class="inputc"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+            />
+            <span class="focus-input"></span>
+          </div>
+          <div class="wrap-input">
+            <input
+            class="inputc"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+            />
+            <span class="focus-input"></span>
+          </div>
+          <div class="wrap-input">
+            <input
+            class="inputc"
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Phone"
+            required
+            />
+            <span class="focus-input"></span>
+          </div>
+          <div class="wrap-input">
+            <textarea
+            class="inputc"
+            name="comment"
+            form="ctcform"
+            placeholder="Message"
+            ></textarea>
+            <span class="focus-input"></span>
+          </div>
+
+
+          <div class="btn">
+            <button type="submit" name="button">Send Message</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
