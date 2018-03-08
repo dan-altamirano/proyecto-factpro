@@ -81,7 +81,7 @@ a {
 /* --------------------------- Contenedores --------------------------------- */
 .main-container {
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -334,7 +334,7 @@ footer {
 }
 
 .ordenes-pendientes{
-
+  display: block;
   text-align: center;
   position: relative;
 }
@@ -354,8 +354,7 @@ footer {
   }
   .ordenes-pendientes td,
   .ordenes-pendientes th{
-    padding: .2%;
-    position: relative;
+    padding: 1%;
   }
 }
 
@@ -363,9 +362,14 @@ footer {
   .main-container {
     padding: 40px 5px;
     margin-top: 10%;
+    width: 100%;
   }
   .feature {
     width: 100%;
+  }
+  .ordenes-pendientes td,
+  .ordenes-pendientes th{
+    padding: .1%;
   }
 }
 
@@ -376,6 +380,5 @@ footer {
   }
   .feature {
     width: 100%;
-  }
   }
 }
