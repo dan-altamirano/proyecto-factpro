@@ -7,7 +7,18 @@
   font-family: Ubuntu-Bold;
   src: url('../fonts/ubuntu/Ubuntu-Bold.ttf');
 }
+/* --------------------------- Busquedas -------------------------------------- */
 
+.btn2 {
+  width: 15%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 17px;
+}
 /* --------------------------- General -------------------------------------- */
 * {
 	margin: 0px;
