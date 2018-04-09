@@ -206,8 +206,7 @@ input::-moz-placeholder,
 input:-ms-input-placeholder {
   color: #8f8fa1;
 }
-<<<<<<< HEAD:css/add_product.css
-=======
+
 a:focus {
 	outline: none;
 }
@@ -355,4 +354,3 @@ footer {
     padding: 6px 4px;
   }
 }
->>>>>>> 2d36d2ae78856d8af65d263b5c9fadd533fac60a:css/main-form.css
