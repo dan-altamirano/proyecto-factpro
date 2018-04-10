@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="css/sign_up.css">
     <script src="js/vendor/jquery-3.3.1.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/vendor/sweetalert.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -23,7 +23,7 @@
             id="name"
             name="name"
             placeholder="Ingresa tu nombre"
-            required
+            pattern="[a-z]{3,10}"
             />
             <span class="focus-input"></span>
           </div>
@@ -77,6 +77,7 @@
             />
             <span class="focus-input"></span>
           </div>
+
           <div class="btn">
             <button type="submit" name="button">Registrarme</button>
           </div>
@@ -84,5 +85,8 @@
         </form>
       </div>
     </div>
+
+    <script src="js/valida.js"></script>
+    <script src="js/actions.js"></script>
   </body>
 </html>

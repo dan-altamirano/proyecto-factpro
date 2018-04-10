@@ -2,7 +2,7 @@ let validateForm = function validateForm(e){
   let $button = $(this);
   let pristine = true;
   //Obtain form
-  let $form = $button.parent('form');
+  let $form = $button.parents('form');
 
   //Obtatin required elements
   let $required = $form.find('*[required]'); //Input / *
