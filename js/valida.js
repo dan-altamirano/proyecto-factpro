@@ -12,7 +12,8 @@ let validateForm = function validateForm(e){
   pristine = validatePatternFields($pattern);
 
   if(pristine){
-    form.submit();
+    swal("¡Gracias!", "¡Ahora eres miembro de FactPro!", "success");
+    //form.submit();
   }
 
   //Obtain any other element
