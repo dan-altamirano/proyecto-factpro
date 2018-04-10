@@ -1,6 +1,7 @@
 let validateForm = function validateForm(e){
   let $button = $(this);
-  let pristine = true;
+  let pristineR = true;
+  let pristineP = true;
   //Obtain form
   let $form = $button.parents('form');
 
@@ -8,12 +9,14 @@ let validateForm = function validateForm(e){
   let $required = $form.find('*[required]'); //Input / *
   let $pattern = $form.find('*[pattern]');
 
-  pristine = validateRequiredFields($required);
-  pristine = validatePatternFields($pattern);
+  pristineR = validateRequiredFields($required);
+  pristineP = validatePatternFields($pattern);
 
-  if(pristine){
-    swal("¡Gracias!", "¡Ahora eres miembro de FactPro!", "success");
-    //form.submit();
+  if(pristineR && pristineP){
+    swal("¡Genial!", "¡Ahora eres miembro de FactPro!", "success")
+    .then((value) => {
+      form.submit();
+    });
   }
 
   //Obtain any other element
@@ -34,13 +37,13 @@ let validateRequiredFields = function validateRequiredFields(fields){
 
       if(element.is('input') && element.val() === '')
       {
-        generateError(element, 'required');
+        generateError(element, 'es requerido', element.attr("name"));
         pristine = false;
       }
 
       if(element.is('select') && element.val() === 0) //Marcar selected en 0 value
       {
-        generateError(element, 'required');
+        generateError(element, 'es requerido');
         pristine = false;
       }
 
@@ -62,7 +65,7 @@ let validatePatternFields = function validatePatternFields(fields){
       let regex = element.attr('pattern');
 
       if(!element.val().match(regex)){
-        generateError(element,'do not match the format');
+        generateError(element,'no va con el formato', element.attr("name"));
         pristine = false;
       }
 
@@ -74,8 +77,8 @@ let validatePatternFields = function validatePatternFields(fields){
 
 
 
-let generateError = function generateError(element, typeError){
+let generateError = function generateError(element, typeError, typeInfo){
   //alert('This ' + element + ' field is ' + typeError);
   element.addClass('error');
-  $('<span class="errorMessage">This field is ' + typeError + '</span>').insertAfter(element);
+  $('<span id = "' + typeInfo + '" class="errorMessage">Este campo ' + typeError + '</span>').insertAfter(element);
 }
