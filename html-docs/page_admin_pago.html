@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>page_admin_pago</title>
+    <link rel="stylesheet" href="../css/reset_password.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+<body>
+<header>
+  <div class="navigation">
+    <a href="#index.html" class="item" id="logo">FACTPRO</a>
+    <a href="#" class="item">INVENTARIOS</a>
+    <a href="#" class="item">VENTAS</a>
+    <a href="#" class="item">COMPRAS</a>
+    <a href="#" class="item">ADMINISTRACION</a>
+    <a href="#" class="item">CONTABILIDAD</a>
+    <a href="#signin" class="item">SIGN OUT</a>
+  </div>
+</header>
+<div class="main-container">
+  <div class="wrap">
+    <form action="#" method="post">
+      <span class="form-title">Pago de gastos/compras</span>
+      <p>Introduce los datos con los que se paga la compra o el gasto</p>
+      <label for="referencia_pago">Cheque / Transferencia / Efectivo</label>
+      <div class="wrap-input">
+        <label class="wrap-input-radio" for="cheque">cheque</label>
+        <input type="radio" name="cheque" value="cheque">
+
+        <label class="wrap-input-radio" for="transf">transferencia</label>
+        <input type="radio" name="transf" value="transf">
+
+        <label class="wrap-input-radio" for="efectivo">efectivo</label>
+        <input type="radio" name="efectivo" value="efectivo">
+
+      </div>
+      <label for="referencia_pago">No. cheque / ref. transferencia / referencia</label>
+      <div class="wrap-input">
+        <input
+        class="inputc"
+        type="text"
+        id="referencia_pago"
+        name="referencia_pago"
+        placeholder="referencia"
+        />
+        <span class="focus-input"></span>
+      </div>
+      <label for="proveedor">proveedor</label>
+      <div class="wrap-input">
+        <input
+        class="inputc"
+        type="text"
+        id="proveedor"
+        name="proveedor"
+        placeholder="nombre o razon social"
+        />
+        <span class="focus-input"></span>
+      </div>
+      <label for="date">Fecha</label>
+      <div class="wrap-input">
+        <input
+        class="inputc"
+        type="date"
+        id="fecha"
+        name="fecha"
+        />
+        <span class="focus-input"></span>
+      </div>
+      <label for="monto">Monto</label>
+      <div class="wrap-input">
+        <input
+        class="inputc"
+        type="number"
+        id="monto"
+        name="monto"
+        placeholder="monto"
+        />
+        <span class="focus-input"></span>
+      </div>
+      <div class="btn">
+        <button type="submit" name="button">Guardar</button>
+      </div>
+      <div class="create">
+        <a href="#">
+          Cancelar
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+<footer class="center">
+  <a href="#"
+  title="Contact"
+  target="_blank"
+  class="colorlink">
+  Contact
+</a>
+</footer>
+</body>
+</html>

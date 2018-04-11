@@ -2,18 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Regístrate</title>
+<<<<<<< HEAD:html-docs/signup.html
+    <title>Sign Up</title>
     <link rel="stylesheet" href="../vendor/normalize.css">
     <link rel="stylesheet" href="../css/sign_up.css">
-    <script src="../js/vendor/jquery-3.3.1.js"></script>
-    <script src="../js/vendor/sweetalert.min.js"></script>
+=======
+    <title>Regístrate</title>
+    <link rel="stylesheet" href="vendor/normalize.css">
+    <link rel="stylesheet" href="css/sign_up.css">
+>>>>>>> developer:sign_up.html
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div class="main-container">
       <div class="wrap-login">
         <form action="index.html" method="post" enctype="multipart/form-data">
-          <span class="form-title">Bienvenido a FactPro</span>
+          <span class="form-title">Bienvenid@ a FactPro</span>
+
           <label for="name">Nombre</label>
           <div class="wrap-input">
             <input
@@ -22,7 +27,7 @@
             id="name"
             name="name"
             placeholder="Ingresa tu nombre"
-            pattern="([a-z]|[A-Z]){3,10}"
+            required
             />
             <span class="focus-input"></span>
           </div>
@@ -63,6 +68,7 @@
             />
             <span class="focus-input"></span>
           </div>
+
           <label for="pass">Contraseña</label>
           <div class="wrap-input">
             <input
@@ -78,10 +84,9 @@
           <div class="btn">
             <button type="submit" name="button">Registrarme</button>
           </div>
+
         </form>
       </div>
     </div>
-    <script src="../js/valida.js"></script>
-    <script src="../js/actions.js"></script>
   </body>
 </html>
