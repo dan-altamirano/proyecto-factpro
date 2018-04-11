@@ -23,17 +23,18 @@
     <form action="#" method="post">
       <span class="form-title">Pago de gastos/compras</span>
       <p>Introduce los datos con los que se paga la compra o el gasto</p>
-      <label for="referencia_pago">Cheque / Transferencia / Efectivo</label>
       <div class="wrap-input">
-        <label class="wrap-input-radio" for="cheque">cheque</label>
-        <input type="radio" name="cheque" value="cheque">
+        <legend>Metodo de pago</legend>
+        <fieldset>
+          <label class="wrap-input-radio" for="cheque">cheque</label>
+          <input type="radio" name="metodo_pago" id="cheque" value="cheque">
 
-        <label class="wrap-input-radio" for="transf">transferencia</label>
-        <input type="radio" name="transf" value="transf">
+          <label class="wrap-input-radio" for="transf">transferencia</label>
+          <input type="radio" name="metodo_pago" id="transf" value="transf">
 
-        <label class="wrap-input-radio" for="efectivo">efectivo</label>
-        <input type="radio" name="efectivo" value="efectivo">
-
+          <label class="wrap-input-radio" for="efectivo">efectivo</label>
+          <input type="radio" name="metodo_pago" id="efectivo" value="efectivo">
+        </fieldset>
       </div>
       <label for="referencia_pago">No. cheque / ref. transferencia / referencia</label>
       <div class="wrap-input">
