@@ -52,7 +52,7 @@ let validateRequiredFields = function validateRequiredFields(fields, date){
 
       if(element.is('select') && element.val() === 0) //Marcar selected en 0 value
       {
-        generateError(element, 'es requerido');
+        generateError(element, 'es requerido', element.attr("name"));
         pristine = false;
       }
 
@@ -97,6 +97,10 @@ let validatePatternFields = function validatePatternFields(fields){
 
 
 let generateError = function generateError(element, typeError, typeInfo){
-  element.addClass('error');
-  $('<span id = "' + typeInfo + '" class="errorMessage">Este campo ' + typeError + '</span>').insertAfter(element);
+
+  if(element.attr("class") != "inputc error")
+  {
+    element.addClass('error');
+    $('<span id = "' + typeInfo + '" class="errorMessage">Este campo ' + typeError + '</span>').insertAfter(element);
+  }
 }
