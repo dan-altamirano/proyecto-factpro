@@ -5,7 +5,6 @@
     <title>Agregar compra</title>
     <link rel="stylesheet" href="../vendor/normalize.css" />
     <link rel="stylesheet" href="../css/main-form.css" />
-    <link rel="stylesheet" href="../css/err-form.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 <body>
@@ -25,11 +24,22 @@
       <label for="departamento">Departamento que solicita</label>
       <div class="wrap-input">
         <input
-        class="inputc error"
+        class="inputc"
         type="text"
         id="departamento"
         name="departamento"
         placeholder="Ingresa nombre de departamento"
+        />
+        <span class="focus-input"></span>
+      </div>
+      <label for="nombre">Nombre del producto</label>
+      <div class="wrap-input">
+        <input
+        class="inputc"
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Ingresa nombre del producto"
         />
         <span class="focus-input"></span>
       </div>
@@ -62,7 +72,19 @@
         type="number"
         id="cantidad"
         name="cantidad"
-        placeholder="Cantidad"
+        min="1"
+        placeholder="1"
+        />
+        <span class="focus-input"></span>
+      </div>
+      <label for="preciounitario">Costo unitario</label>
+      <div class="wrap-input">
+        <input
+        class="inputc"
+        type="number"
+        id="preciounitario"
+        name="preciounitario"
+        placeholder="0.00"
         />
         <span class="focus-input"></span>
       </div>
@@ -73,7 +95,7 @@
         type="number"
         id="preciototal"
         name="preciototal"
-        placeholder="Costo total"
+        placeholder="0.00"
         />
         <span class="focus-input"></span>
       </div>
