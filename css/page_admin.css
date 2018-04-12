@@ -333,7 +333,17 @@ footer {
     color: #5EA9FF;
 }
 
+.container {
+  padding: 0px 16px;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .ordenes-pendientes{
+  padding: 0px 16px;
+  padding-top: 60px;
   display: block;
   text-align: center;
   position: relative;
