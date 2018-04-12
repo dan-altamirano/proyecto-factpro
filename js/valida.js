@@ -67,8 +67,9 @@ let validateRequiredFields = function validateRequiredFields(fields, date){
             text: "¡Para poder pertenecer a FactPro debes ser mayor de edad!",
             icon: "warning",
           })
+          pristine = false;
         }
-        pristine = false;
+
       }
     });
 
