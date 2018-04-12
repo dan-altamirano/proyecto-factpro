@@ -333,6 +333,86 @@ footer {
     color: #5EA9FF;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+thead th{
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+td, th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media only screen and (max-width: 850px){
+  .main-container {
+    padding: 40px 5px;
+    margin-top: 10%;
+    width: 80%;
+  }
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+
+	/*
+	Label the data
+	*/
+
+	td:nth-of-type(1):before { content: "Compra/Gasto"; }
+	td:nth-of-type(2):before { content: "Producto"; }
+	td:nth-of-type(3):before { content: "Unidades"; }
+	td:nth-of-type(4):before { content: "Precio"; }
+	td:nth-of-type(5):before { content: "Total"; }
+	td:nth-of-type(6):before { content: "Fecha"; }
+	td:nth-of-type(7):before { content: "Referencia"; }
+	td:nth-of-type(8):before { content: "Comentario"; }
+}
+
+
+/*
 .container {
   padding: 0px 16px;
   padding-top: 60px;
@@ -391,4 +471,4 @@ footer {
   .feature {
     width: 100%;
   }
-}
+} */
