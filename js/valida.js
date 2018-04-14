@@ -32,7 +32,6 @@ let getAge = function getAge(date, birth)
     if (m < 0 || (m === 0 && date.getDate() < birthday.getDate())) {
         age--;
     }
-
     return age;
 }
 

@@ -32,17 +32,20 @@
             class="inputc"
             type="date"
             name="birthday"
+            pattern="[0-9]+/[0-9]+/[0-9]"
+            placeholder="DD/MM/YYYY"
             required
             />
             <span class="focus-input"></span>
           </div>
-          <label for="username">Correo</label>
+          <label for="email">Correo</label>
           <div class="wrap-input">
             <input
             class="inputc"
             type="email"
             id="email"
             name="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
             placeholder="tu@ejemplo.com"
             required
             />
@@ -69,6 +72,7 @@
             type="password"
             id="pass"
             name="pass"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
             placeholder="Elige una contraseña"
             required
             />
