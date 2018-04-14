@@ -2,6 +2,7 @@ let validateForm = function validateForm(e){
   let $button = $(this);
   let pristineR = true;
   let pristineP = true;
+  let date = new Date();
   //Obtain form
   let $form = $button.parents('form');
 
@@ -9,25 +10,33 @@ let validateForm = function validateForm(e){
   let $required = $form.find('*[required]'); //Input / *
   let $pattern = $form.find('*[pattern]');
 
-  pristineR = validateRequiredFields($required);
+  pristineR = validateRequiredFields($required, date);
   pristineP = validatePatternFields($pattern);
 
   if(pristineR && pristineP){
     swal("¡Genial!", "¡Ahora eres miembro de FactPro!", "success")
-    .then((value) => {
-      form.submit();
-    });
+
   }
-
-  //Obtain any other element
-
-  //Validate required elements
 
   e.preventDefault(); //Don't execute
 
 }
 
-let validateRequiredFields = function validateRequiredFields(fields){
+
+let getAge = function getAge(date, birth)
+{
+    var birthday = new Date(birth);
+    var age = date.getFullYear() - birthday.getFullYear();
+    var m = date.getMonth() - birthday.getMonth();
+
+    if (m < 0 || (m === 0 && date.getDate() < birthday.getDate())) {
+        age--;
+    }
+
+    return age;
+}
+
+let validateRequiredFields = function validateRequiredFields(fields, date){
     //console.log(fields);
     let pristine = true;
 
@@ -43,13 +52,25 @@ let validateRequiredFields = function validateRequiredFields(fields){
 
       if(element.is('select') && element.val() === 0) //Marcar selected en 0 value
       {
-        generateError(element, 'es requerido');
+        generateError(element, 'es requerido', element.attr("name"));
         pristine = false;
       }
 
+      if(element.is('input') && element.attr("type") == "date")
+      {
+        let age = getAge(date, element.val());
 
+        if(age < 18)
+        {
+          swal({
+            title: "¡Atención!",
+            text: "¡Para poder pertenecer a FactPro debes ser mayor de edad!",
+            icon: "warning",
+          })
+          pristine = false;
+        }
 
-      //console.log(element);
+      }
     });
 
     return pristine;
@@ -57,7 +78,6 @@ let validateRequiredFields = function validateRequiredFields(fields){
 
 
 let validatePatternFields = function validatePatternFields(fields){
-    //console.log(fields);
     let pristine = true;
 
     $.each(fields, function() {
@@ -69,7 +89,6 @@ let validatePatternFields = function validatePatternFields(fields){
         pristine = false;
       }
 
-      //console.log(element);
     });
 
     return pristine;
@@ -78,7 +97,10 @@ let validatePatternFields = function validatePatternFields(fields){
 
 
 let generateError = function generateError(element, typeError, typeInfo){
-  //alert('This ' + element + ' field is ' + typeError);
-  element.addClass('error');
-  $('<span id = "' + typeInfo + '" class="errorMessage">Este campo ' + typeError + '</span>').insertAfter(element);
+
+  if(element.attr("class") != "inputc error")
+  {
+    element.addClass('error');
+    $('<span id = "' + typeInfo + '" class="errorMessage">Este campo ' + typeError + '</span>').insertAfter(element);
+  }
 }
