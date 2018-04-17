@@ -5,8 +5,6 @@ submitButton.on('click',validateForm);
 
 var y = $("input");
 
-//console.log(y);
-
 $.each(y, function() {
   let element = $(this);
 
@@ -21,12 +19,3 @@ $.each(y, function() {
   });
 
 });
-
-/*
-$("#name").change(function(){
-          if($("#name").attr("class") == "inputc error")
-          {
-            $("#name").removeClass("error");
-          }
-});
-*/
