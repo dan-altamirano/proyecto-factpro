@@ -141,7 +141,6 @@ let doAnAction =  function doAnAction(e){
     }
   });
   }
-<<<<<<< HEAD
   if($button.attr("name") == "cancelar")
   {
     swal({
@@ -161,7 +160,6 @@ let doAnAction =  function doAnAction(e){
     }
   });
   }
-=======
   else {
 
     if($button.attr("name") == "finInventario")
@@ -185,7 +183,7 @@ let doAnAction =  function doAnAction(e){
             $("#inventory tr:first").append("<th class='titulo' id='exist'>EXISTENTES</td>");
 
             $("#inventory tr:gt(0)").append("<td>New Column</td>");
-            
+
 
           }
       }
@@ -193,6 +191,4 @@ let doAnAction =  function doAnAction(e){
     }
 
   }
-
->>>>>>> 77c64d9425ddff6b214ef3eeddb80437a94dd793
 }
