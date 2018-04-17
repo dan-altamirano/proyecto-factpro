@@ -30,6 +30,11 @@ let validateForm = function validateForm(e){
       swal("¡Bien!", "Modificado correctamente", "success")
     }
 
+    if($form.attr("id") == "ctcform")
+    {
+      swal("¡Hemos recibido tu información!", "¡Gracias! En breve nos pondremos en contacto contigo", "success")
+    }
+
   }
 
   e.preventDefault(); //Don't execute
