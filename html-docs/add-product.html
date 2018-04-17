@@ -5,6 +5,7 @@
     <title>Agregar producto</title>
     <link rel="stylesheet" href="../vendor/normalize.css">
     <link rel="stylesheet" href="../css/main-form.css">
+    <link rel="stylesheet" href="../css/err-form.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -19,17 +20,18 @@
 </header>
 <div class="main-container">
   <div class="wrap">
-  <form action="" method="POST" enctype="multipart/form-data">
+  <form action="" id="agregar" method="POST" enctype="multipart/form-data">
     <span class="form-title">Agregar producto</span>
 
-    <label for="id">ID</label>
+    <label for="id">SKU</label>
     <div class="wrap-input">
       <input
       class="inputc"
       type="text"
-      id="id"
-      name="id"
-      placeholder="ID del producto"
+      id="sku"
+      name="sku"
+      placeholder="SKU del producto"
+      required
       />
     </div>
     <label for="name">Nombre</label>
@@ -40,6 +42,7 @@
       id="name"
       name="name"
       placeholder="Nombre del producto"
+      required
       />
     </div>
     <label for="price">Precio</label>
@@ -50,6 +53,7 @@
       id="price"
       name="price"
       placeholder="Precio"
+      required
       />
     </div>
     <label for="amount">Cantidad</label>
@@ -60,6 +64,7 @@
       id="amount"
       name="amount"
       placeholder="Cantidad"
+      required
       />
     </div>
       <div class="btn">
@@ -77,5 +82,9 @@
   <p>FACTPRO <a href="#"
     title="Contact" target="_blank" class="colorlink">FactPro</a></p>
 </footer>
+  <script src="../js/vendor/jquery-3.3.1.js"></script>
+  <script src="../js/vendor/sweetalert.min.js"></script>
+  <script src="../js/valida.js"></script>
+  <script src="../js/actions.js"></script>
   </body>
 </html>

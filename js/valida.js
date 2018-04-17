@@ -6,6 +6,7 @@ let validateForm = function validateForm(e){
   //Obtain form
   let $form = $button.parents('form');
 
+    console.log($form);
   //Obtatin required elements
   let $required = $form.find('*[required]'); //Input / *
   let $pattern = $form.find('*[pattern]');
@@ -14,7 +15,21 @@ let validateForm = function validateForm(e){
   pristineP = validatePatternFields($pattern);
 
   if(pristineR && pristineP){
-    swal("¡Genial!", "¡Ahora eres miembro de FactPro!", "success")
+
+    if($form.attr("id") == "signup")
+    {
+      swal("¡Genial!", "¡Ahora eres miembro de FactPro!", "success")
+    }
+
+    if($form.attr("id") == "agregar")
+    {
+      swal("¡Bien!", "Agregado correctamente", "success")
+    }
+
+    if($form.attr("id") == "modificar")
+    {
+      swal("¡Bien!", "Modificado correctamente", "success")
+    }
 
   }
 
