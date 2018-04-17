@@ -2,9 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
+<<<<<<< HEAD:html-docs/contact.html
     <title>FactPro | Contact</title>
     <link rel="stylesheet" href="../vendor/normalize.css" />
     <link rel="stylesheet" href="../css/contact.css" />
+=======
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../vendor/normalize.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="../css/err-form.css">
+>>>>>>> developer:html-docs/contact.html
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
@@ -20,7 +27,11 @@
   <div class="container">
     <div class="main-container">
       <div class="wrap-login">
-        <form action="index.html" method="post" enctype="multipart/form-data" id="ctcform">
+        <form
+        action="index.html"
+        method="post"
+        enctype="multipart/form-data"
+        id="ctcform">
           <span class="form-title">¿Necesitas ayuda? ¡Estamos aquí para ti!</span>
           <div class="wrap-input">
             <input
@@ -57,22 +68,23 @@
           </div>
           <div class="wrap-input">
             <textarea
-            class="inputc"
+            class="inputc2"
             name="comment"
             form="ctcform"
             placeholder="Mensaje"
             ></textarea>
             <span class="focus-input"></span>
           </div>
-
-
           <div class="btn">
             <button type="submit" name="button">Enviar mensaje</button>
           </div>
-
         </form>
       </div>
     </div>
   </div>
+    <script src="../js/vendor/jquery-3.3.1.js"></script>
+    <script src="../js/vendor/sweetalert.min.js"></script>
+    <script src="../js/valida.js"></script>
+    <script src="../js/actions.js"></script>
   </body>
 </html>

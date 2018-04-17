@@ -8,6 +8,27 @@
   src: url('../fonts/ubuntu/Ubuntu-Bold.ttf');
 }
 
+/* --------------------------- Busquedas -------------------------------------- */
+
+.btn2 {
+  width: 15%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 17px;
+}
+
+
+.wrap-inputInv {
+  width: 100%;
+  position: relative;
+  background-color: #e6e6e6;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
 /* --------------------------- General -------------------------------------- */
 * {
 	margin: 0px;
@@ -28,7 +49,6 @@ h2 {
   margin: 0;
 }
 input {
-  font-size: 16px;
 	outline: none;
 	border: none;
 }
@@ -65,7 +85,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 32px;
+  padding: 0 20px;
+  width: 100%;
+  height: 62px;
   background-color: #827ffe;
   border-radius: 3px;
   -webkit-transition: all 0.4s;
@@ -103,6 +125,7 @@ caption {
   padding: 0 20px 0 38px;
 }
 .btn {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -110,16 +133,19 @@ caption {
   display: flex;
   flex-wrap: wrap;
   margin-top: 17px;
-  flex-basis: 20%;
 }
 .titulo {
   font-size: 16px;
   background-color: #f1f1f1;
 }
-.vista {
-  flex-basis: 50%;
+.wrap-input {
+  width: 25%;
+  position: relative;
+  background-color: #e6e6e6;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  margin-bottom: 16px;
 }
-
 /* --------------------------- Animaciones ---------------------------------- */
 button:hover {
 	cursor: pointer;
@@ -184,8 +210,7 @@ a {
 }
 span {
   color: black;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 12px;
 }
 header {
   position: fixed;

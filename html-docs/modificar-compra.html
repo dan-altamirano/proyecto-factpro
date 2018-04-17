@@ -29,6 +29,23 @@
         id="departamento"
         name="departamento"
         value="Departamento 1"
+        placeholder="Ingresa nombre de departamento"
+        pattern="([a-z]|[A-Z]){5}"
+        required
+        />
+        <span class="focus-input"></span>
+      </div>
+      <label for="nombre">Nombre del producto</label>
+      <div class="wrap-input">
+        <input
+        class="inputc"
+        type="text"
+        id="nombre"
+        name="nombre"
+        value="producto 1"
+        placeholder="Ingresa nombre del producto"
+        pattern="([a-z]|[A-Z]){4}"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -39,7 +56,10 @@
         type="date"
         id="fpedido"
         name="fpedido"
-        value="Fecha de pedido 1"
+        value="10/02/2018"
+        placeholder="DD/MM/AAAA"
+        pattern="[0-9][0-9]+/[0-9][0-9]+/[0-9][0-9][0-9][0-9]"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -50,7 +70,10 @@
         type="date"
         id="fentrega"
         name="fentrega"
-        value="Fecha de entrega 1"
+        value="15/02/2018"
+        placeholder="DD/MM/AAAA"
+        pattern="[0-9][0-9]+/[0-9][0-9]+/[0-9][0-9][0-9][0-9]"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -61,7 +84,24 @@
         type="number"
         id="cantidad"
         name="cantidad"
-        value="1"
+        value="10"
+        min="1"
+        placeholder="1"
+        required
+        />
+        <span class="focus-input"></span>
+      </div>
+      <label for="preciounitario">Costo unitario</label>
+      <div class="wrap-input">
+        <input
+        class="inputc"
+        type="number"
+        id="preciounitario"
+        name="preciounitario"
+        placeholder="0.00"
+        value="200"
+        min="1"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -72,7 +112,10 @@
         type="number"
         id="preciototal"
         name="preciototal"
-        value="1"
+        value="2000"
+        placeholder="0.00"
+        min="1"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -95,5 +138,9 @@
   Contact
 </a>
 </footer>
+<script src="../js/vendor/jquery-3.3.1.js"></script>
+<script src="../js/vendor/sweetalert.min.js"></script>
+<script src="../js/valida-compra.js"></script>
+<script src="../js/actions.js"></script>
 </body>
 </html>
