@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>page_admin_pago</title>
+    <link rel="stylesheet" href="../vendor/normalize.css" />
     <link rel="stylesheet" href="../css/reset_password.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
@@ -25,15 +26,15 @@
       <p>Introduce los datos con los que se paga la compra o el gasto</p>
       <div class="wrap-input">
         <legend>Metodo de pago</legend>
-        <fieldset>
+        <fieldset required>
           <label class="wrap-input-radio" for="cheque">cheque</label>
-          <input type="radio" name="metodo_pago" id="cheque" value="cheque">
+          <input type="radio" name="metodo_pago" id="cheque" value="cheque" required>
 
           <label class="wrap-input-radio" for="transf">transferencia</label>
-          <input type="radio" name="metodo_pago" id="transf" value="transf">
+          <input type="radio" name="metodo_pago" id="transf" value="transf" required>
 
           <label class="wrap-input-radio" for="efectivo">efectivo</label>
-          <input type="radio" name="metodo_pago" id="efectivo" value="efectivo">
+          <input type="radio" name="metodo_pago" id="efectivo" value="efectivo" required>
         </fieldset>
       </div>
       <label for="referencia_pago">No. cheque / ref. transferencia / referencia</label>
@@ -44,6 +45,7 @@
         id="referencia_pago"
         name="referencia_pago"
         placeholder="referencia"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -55,6 +57,7 @@
         id="proveedor"
         name="proveedor"
         placeholder="nombre o razon social"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -65,6 +68,7 @@
         type="date"
         id="fecha"
         name="fecha"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -98,5 +102,9 @@
   Contact
 </a>
 </footer>
+<script src="../js/vendor/jquery-3.3.1.js"></script>
+<script src="../js/vendor/sweetalert.min.js"></script>
+<script src="../js/validaIn.js"></script>
+<script src="../js/actions.js"></script>
 </body>
 </html>
