@@ -6,7 +6,6 @@ let validateForm = function validateForm(e){
   //Obtain form
   let $form = $button.parents('form');
 
-    console.log($form);
   //Obtatin required elements
   let $required = $form.find('*[required]'); //Input / *
   let $pattern = $form.find('*[pattern]');
@@ -117,4 +116,29 @@ let generateError = function generateError(element, typeError, typeInfo){
     element.addClass('error');
     $('<span id = "' + typeInfo + '" class="errorMessage">Este campo ' + typeError + '</span>').insertAfter(element);
   }
+}
+
+let doAnAction =  function doAnAction(e){
+  let $button = $(this);
+
+  if($button.attr("name") == "eliminar")
+  {
+    swal({
+    title: "¿Estas seguro?",
+    text: "¡Una vez eliminado, no podrás recuperar el registro!",
+    icon: "warning",
+    buttons: ["Cancelar", "Eliminar"],
+    dangerMode: true,
+  })
+  .then((willDelete) => {
+    if (willDelete) {
+      swal("¡El registro ha sido eliminado!", {
+        icon: "success",
+      });
+    } else {
+      swal("Eliminación Cancelada");
+    }
+  });
+  }
+
 }
