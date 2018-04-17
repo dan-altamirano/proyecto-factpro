@@ -141,15 +141,36 @@ let doAnAction =  function doAnAction(e){
     }
   });
   }
+  else {
 
-  if($button.attr("name") == "finInventario")
-  {
-    swal("Inventario Terminado", "¡Información almacenada correctamente!", "success")
-  }
+    if($button.attr("name") == "finInventario")
+    {
+      swal("Inventario Terminado", "¡Información almacenada correctamente!", "success")
+    }
+    else {
+      if($button.attr("name") == "editInventario")
+      {
+        swal("Inventario Modificado", "¡Información actualizada correctamente!", "success")
+      }
+      else
+      {
+          // Add counter
+          let $tb = $("#inventory tr:last th");
 
-  if($button.attr("name") == "editInventario")
-  {
-    swal("Inventario Modificado", "¡Información actualizada correctamente!", "success")
+          console.log($tb);
+
+          if($tb.attr("id") != "exist")
+          {
+            $("#inventory tr:first").append("<th class='titulo' id='exist'>EXISTENTES</td>");
+
+            $("#inventory tr:gt(0)").append("<td>New Column</td>");
+            
+
+          }
+      }
+
+    }
+
   }
 
 }
