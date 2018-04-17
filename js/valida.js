@@ -142,4 +142,14 @@ let doAnAction =  function doAnAction(e){
   });
   }
 
+  if($button.attr("name") == "finInventario")
+  {
+    swal("Inventario Terminado", "¡Información almacenada correctamente!", "success")
+  }
+
+  if($button.attr("name") == "editInventario")
+  {
+    swal("Inventario Modificado", "¡Información actualizada correctamente!", "success")
+  }
+
 }
