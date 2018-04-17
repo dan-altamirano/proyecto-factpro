@@ -36,9 +36,7 @@ let validateForm = function validateForm(e){
     }
 
   }
-
   e.preventDefault(); //Don't execute
-
 }
 
 
