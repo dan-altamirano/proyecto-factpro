@@ -14,7 +14,26 @@ let validateForm = function validateForm(e){
   pristineP = validatePatternFields($pattern);
 
   if(pristineR && pristineP){
-    swal("¡Genial!", "¡Ahora eres miembro de FactPro!", "success")
+
+    if($form.attr("id") == "signup")
+    {
+      swal("¡Genial!", "¡Ahora eres miembro de FactPro!", "success")
+    }
+
+    if($form.attr("id") == "agregar")
+    {
+      swal("¡Bien!", "Agregado correctamente", "success")
+    }
+
+    if($form.attr("id") == "modificar")
+    {
+      swal("¡Bien!", "Modificado correctamente", "success")
+    }
+
+    if($form.attr("id") == "ctcform")
+    {
+      swal("¡Hemos recibido tu información!", "¡Gracias! En breve nos pondremos en contacto contigo", "success")
+    }
 
   }
 
@@ -98,4 +117,29 @@ let generateError = function generateError(element, typeError, typeInfo){
     element.addClass('error');
     $('<span id = "' + typeInfo + '" class="errorMessage">Este campo ' + typeError + '</span>').insertAfter(element);
   }
+}
+
+let doAnAction =  function doAnAction(e){
+  let $button = $(this);
+
+  if($button.attr("name") == "eliminar")
+  {
+    swal({
+    title: "¿Estas seguro?",
+    text: "¡Una vez eliminado, no podrás recuperar el registro!",
+    icon: "warning",
+    buttons: ["Cancelar", "Eliminar"],
+    dangerMode: true,
+  })
+  .then((willDelete) => {
+    if (willDelete) {
+      swal("¡El registro ha sido eliminado!", {
+        icon: "success",
+      });
+    } else {
+      swal("Eliminación Cancelada");
+    }
+  });
+  }
+
 }

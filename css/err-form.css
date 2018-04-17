@@ -1,4 +1,9 @@
+
+/*-----------  Error --------------------*/
 .error {
-  color: #FF0000;
-  border: 1px solid #FF0000;
+  border: 1px solid red;
+}
+.errorMessage{
+  color: red;
+  font-size: 10px;
 }
