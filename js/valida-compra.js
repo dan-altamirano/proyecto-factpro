@@ -15,6 +15,10 @@ let validateForm = function validateForm(e){
   if(pristineR && pristineP){
     swal("¡Genial!", "¡Registro guardado exitosamente!", "success")
   }
+  if($form.attr("id") == "modificar")
+  {
+    swal("¡Bien!", "Modificado correctamente", "success")
+  }
   e.preventDefault(); //Don't execute
 }
 
