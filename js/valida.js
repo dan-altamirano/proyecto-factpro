@@ -155,16 +155,43 @@ let doAnAction =  function doAnAction(e){
       else
       {
           // Add counter
-          let $tb = $("#inventory tr:last th");
+          let $tb = $("#inventory tr:first th:last").html();
 
-          console.log($tb);
-
-          if($tb.attr("id") != "exist")
+          if($tb != "EXISTENTES")
           {
-            $("#inventory tr:first").append("<th class='titulo' id='exist'>EXISTENTES</td>");
+            $("#inventory tr:first").append("<th class='titulo' id='exist'>EXISTENTES</th>");
 
-            $("#inventory tr:gt(0)").append("<td>New Column</td>");
-            
+            $("#inventory tr:gt(0)").append("<td id='exists'>0</td>");
+
+
+            let $tr = $button.parents('tr');
+            let $value = $tr.find('input').val();
+
+            if($value == "")
+            {
+              $value = "0";
+            }
+
+            if($value > 0)
+            {
+              let $th = $tr.find('td#exists').text($value);
+            }
+
+          }
+          else {
+              let $tr = $button.parents('tr');
+              let $value = $tr.find('input').val();
+              let $th = $tr.find('td#exists').html();
+
+              if($value == "")
+              {
+                $value = "0";
+              }
+              if($value > 0)
+              {
+                let valor = parseFloat($value) + parseFloat($th);
+                $tr.find('td#exists').text(valor);
+              }
 
           }
       }
