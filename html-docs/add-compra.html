@@ -29,6 +29,8 @@
         id="departamento"
         name="departamento"
         placeholder="Ingresa nombre de departamento"
+        pattern="([a-z]|[A-Z]){5}"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -40,6 +42,8 @@
         id="nombre"
         name="nombre"
         placeholder="Ingresa nombre del producto"
+        pattern="([a-z]|[A-Z]){4}"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -51,6 +55,8 @@
         id="fpedido"
         name="fpedido"
         placeholder="DD/MM/AAAA"
+        pattern="[0-9][0-9]+/[0-9][0-9]+/[0-9][0-9][0-9][0-9]"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -62,6 +68,8 @@
         id="fentrega"
         name="fentrega"
         placeholder="DD/MM/AAAA"
+        pattern="[0-9][0-9]+/[0-9][0-9]+/[0-9][0-9][0-9][0-9]"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -74,6 +82,7 @@
         name="cantidad"
         min="1"
         placeholder="1"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -85,6 +94,8 @@
         id="preciounitario"
         name="preciounitario"
         placeholder="0.00"
+        min="1"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -96,6 +107,8 @@
         id="preciototal"
         name="preciototal"
         placeholder="0.00"
+        min="1"
+        required
         />
         <span class="focus-input"></span>
       </div>
@@ -118,5 +131,9 @@
   Contact
 </a>
 </footer>
+<script src="../js/vendor/jquery-3.3.1.js"></script>
+<script src="../js/vendor/sweetalert.min.js"></script>
+<script src="../js/valida-compra.js"></script>
+<script src="../js/actions.js"></script>
 </body>
 </html>
