@@ -141,6 +141,7 @@ let doAnAction =  function doAnAction(e){
     }
   });
   }
+<<<<<<< HEAD
   if($button.attr("name") == "cancelar")
   {
     swal({
@@ -160,4 +161,38 @@ let doAnAction =  function doAnAction(e){
     }
   });
   }
+=======
+  else {
+
+    if($button.attr("name") == "finInventario")
+    {
+      swal("Inventario Terminado", "¡Información almacenada correctamente!", "success")
+    }
+    else {
+      if($button.attr("name") == "editInventario")
+      {
+        swal("Inventario Modificado", "¡Información actualizada correctamente!", "success")
+      }
+      else
+      {
+          // Add counter
+          let $tb = $("#inventory tr:last th");
+
+          console.log($tb);
+
+          if($tb.attr("id") != "exist")
+          {
+            $("#inventory tr:first").append("<th class='titulo' id='exist'>EXISTENTES</td>");
+
+            $("#inventory tr:gt(0)").append("<td>New Column</td>");
+            
+
+          }
+      }
+
+    }
+
+  }
+
+>>>>>>> 77c64d9425ddff6b214ef3eeddb80437a94dd793
 }
