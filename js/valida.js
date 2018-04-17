@@ -141,6 +141,25 @@ let doAnAction =  function doAnAction(e){
     }
   });
   }
+  if($button.attr("name") == "cancelar")
+  {
+    swal({
+    title: "¿Estas seguro?",
+    text: "¡Una vez cancelada, no podrás revertirlo!",
+    icon: "warning",
+    buttons: ["Salir", "Cancelar factura"],
+    dangerMode: true,
+  })
+  .then((willDelete) => {
+    if (willDelete) {
+      swal("¡La factura ha sido cancelada!", {
+        icon: "success",
+      });
+    } else {
+      swal("Operacion cancelada");
+    }
+  });
+  }
   else {
 
     if($button.attr("name") == "finInventario")
@@ -199,5 +218,4 @@ let doAnAction =  function doAnAction(e){
     }
 
   }
-
 }
