@@ -30,3 +30,15 @@ buttonButton.on('click',doAnAction);
 
 /* ---------- TABLES  -------------*/
 // Agrega lo necesario a tablas
+// Las tablas con CHECKBOX deben tener ID "tableSelect"
+let table = $('#tableSelect');
+
+$.each(table, function() {
+  let element = $(this);
+  let id = element.attr("id");
+
+  $('#'  + id + ' tr:first').prepend("<th class='titulo'>X</th>");
+  $('#' + id +' tr:gt(0)').prepend("<td><input type='checkbox'/></td>");
+});
+
+let selectedCBox = $('input[type=checkbox]');
