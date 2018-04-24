@@ -42,3 +42,24 @@ $.each(table, function() {
 });
 
 let selectedCBox = $('input[type=checkbox]');
+
+$.each(selectedCBox, function() {
+  let element = $(this);
+
+  element.change(function(){
+      if(element.attr("class") != "checkSelect")
+      {
+        element.addClass("checkSelect");
+
+        //console.log(element.find('.checkSelect'));
+
+
+      }
+      else
+      {
+        element.removeClass("checkSelect");
+        //console.log("Des-seleccionado");
+      }
+  });
+
+});
