@@ -51,14 +51,19 @@ $.each(selectedCBox, function() {
       {
         element.addClass("checkSelect");
 
-        //console.log(element.find('.checkSelect'));
+        let x = $(this).parents('tr');
+        x.css("background-color","lightgray");
 
+
+        //console.log(x);
 
       }
       else
       {
         element.removeClass("checkSelect");
         //console.log("Des-seleccionado");
+        let x = $(this).parents('tr');
+        x.css("background-color","white");
       }
   });
 
