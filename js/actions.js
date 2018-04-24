@@ -54,7 +54,6 @@ $.each(selectedCBox, function() {
         let x = $(this).parents('tr');
         x.css("background-color","lightgray");
 
-
         //console.log(x);
 
       }
