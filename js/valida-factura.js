@@ -15,20 +15,12 @@ let validateForm = function validateForm(e){
   if(pristineR && pristineP){
     swal("¡Genial!", "¡Registro guardado exitosamente!", "success")
   }
-  if($form.attr("id") == "modificar")
-  {
-    swal("¡Bien!", "Modificado correctamente", "success")
-  }
   e.preventDefault(); //Don't execute
 }
 
 let validateRequiredFields = function validateRequiredFields(fields){
     //console.log(fields);
     let pristine = true;
-    let cantidad = 0;
-    let costo = 0;
-    let total = 0;
-
     $.each(fields, function() {
       let element = $(this);
 
@@ -43,26 +35,7 @@ let validateRequiredFields = function validateRequiredFields(fields){
         generateError(element, 'es requerido', element.attr("name"));
         pristine = false;
       }
-
-      if(element.is('input') && element.attr("type") == "number")
-      {
-        if (element.attr("id") == "cantidad" && element.val() != 0) {
-          cantidad = element.val();
-        }
-        if (element.attr("id") == "preciounitario" && element.val() != 0) {
-          costo = element.val();
-        }
-        if (element.attr("id") == "preciototal") {
-          total = costo * cantidad;
-          if (element.val() != total) {
-            generateError(element, 'no corresponde al costo total', element.attr("name"));
-            pristine = false;
-          }
-        }
-      }
-
     });
-    console.log('total: ' + costo * cantidad);
     return pristine;
 }
 

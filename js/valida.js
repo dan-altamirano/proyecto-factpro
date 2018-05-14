@@ -36,9 +36,7 @@ let validateForm = function validateForm(e){
     }
 
   }
-
   e.preventDefault(); //Don't execute
-
 }
 
 
@@ -142,14 +140,83 @@ let doAnAction =  function doAnAction(e){
   });
   }
 
-  if($button.attr("name") == "finInventario")
+  if($button.attr("name") == "cancelar")
   {
-    swal("Inventario Terminado", "¡Información almacenada correctamente!", "success")
+    swal({
+    title: "¿Estas seguro?",
+    text: "¡Una vez cancelada, no podrás revertirlo!",
+    icon: "warning",
+    buttons: ["Salir", "Cancelar factura"],
+    dangerMode: true,
+  })
+  .then((willDelete) => {
+    if (willDelete) {
+      swal("¡La factura ha sido cancelada!", {
+        icon: "success",
+      });
+    } else {
+      swal("Operacion cancelada");
+    }
+  });
   }
+  else {
 
-  if($button.attr("name") == "editInventario")
-  {
-    swal("Inventario Modificado", "¡Información actualizada correctamente!", "success")
+    if($button.attr("name") == "finInventario")
+    {
+      swal("Inventario Terminado", "¡Información almacenada correctamente!", "success")
+    }
+    else {
+      if($button.attr("name") == "editInventario")
+      {
+        swal("Inventario Modificado", "¡Información actualizada correctamente!", "success")
+      }
+      else
+      {
+          // Add counter
+          let $tb = $("#inventory tr:first th:last").html();
+
+          if($tb != "EXISTENTES")
+          {
+            $("#inventory tr:first").append("<th class='titulo' id='exist'>EXISTENTES</th>");
+
+            $("#inventory tr:gt(0)").append("<td id='exists'>0</td>");
+
+            let $tr = $button.parents('tr');
+            let $value = $tr.find('input').val();
+
+            if($value == "")
+            {
+              $value = "0";
+            }
+
+            if($value > 0)
+            {
+              let $th = $tr.find('td#exists').text($value);
+              $tr.find('input').val("");
+            }
+
+          }
+          else {
+              let $tr = $button.parents('tr');
+              let $value = $tr.find('input').val();
+              let $th = $tr.find('td#exists').html();
+
+              if($value == "")
+              {
+                $value = "0";
+              }
+
+              if($value > 0)
+              {
+                let valor = parseFloat($value) + parseFloat($th);
+                $tr.find('td#exists').text(valor);
+                $tr.find('input').val("");
+              }
+
+          }
+      }
+
+    }
+
   }
-
 }
