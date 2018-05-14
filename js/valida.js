@@ -139,6 +139,7 @@ let doAnAction =  function doAnAction(e){
     }
   });
   }
+
   if($button.attr("name") == "cancelar")
   {
     swal({
